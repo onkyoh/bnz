@@ -36,7 +36,7 @@ module.exports = function (eleventyConfig) {
 
   // Converts <img> tags to responsive <picture>s. An opt-in feature. Please read config/plugins/image.js to find out more
   // https://github.com/saneef/eleventy-plugin-img2picture
-  // eleventyConfig.addPlugin(pluginImage, configImage)
+  eleventyConfig.addPlugin(pluginImage, configImage);
 
   // Production only plugins. Only run when "npm run build" is used.
   if (isProduction) {
@@ -54,11 +54,11 @@ module.exports = function (eleventyConfig) {
    *      Copy/paste non-template files straight to /public, without any interference from the eleventy engine
    *      https://www.11ty.dev/docs/copy/
    */
-  eleventyConfig.addPassthroughCopy("./src/assets/css"); // CS-TODO - For optimization branch, remove CSS passthrough
+  // eleventyConfig.addPassthroughCopy("./src/assets/css"); // CS-TODO - For optimization branch, remove CSS passthrough
   eleventyConfig.addPassthroughCopy("./src/assets/favicons");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/images");
-  eleventyConfig.addPassthroughCopy("./src/assets/js"); // CS-TODO - For optimization branch, remove JS passthrough
+  // eleventyConfig.addPassthroughCopy("./src/assets/js"); // CS-TODO - For optimization branch, remove JS passthrough
   eleventyConfig.addPassthroughCopy("./src/assets/svgs");
 
   /**
