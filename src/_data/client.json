@@ -1,18 +1,19 @@
 {
-  "name": "Earth Benders Landscaping",
-  "email": "help@codestitch.app",
-  "phoneForTel": "647-608-7831",
-  "phoneFormatted": "(647) 608-7831",
+  "name": "BnZ Interlocking and Design",
+  "email": "domenicg@hotmail.com",
+  "phoneForTel": "416-881-0102",
+  "phoneFormatted": "(416) 881-0102",
   "address": {
-    "lineOne": "First Address Line",
-    "lineTwo": "Second Address Line",
-    "city": "Denver",
-    "state": "CO",
-    "zip": "80206",
-    "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+    "lineOne": "349 Gladstone Ave",
+    "lineTwo": "",
+    "city": "Toronto",
+    "state": "ON",
+    "zip": "M6H 3H5",
+    "mapLink": "https://maps.app.goo.gl/zwoTzH8LVM3QBtnn9"
   },
   "social": {
-    "instagram": "https://www.instagram.com/earthbenderslandscaping/"
+    "instagram": "https://www.instagram.com/bnzinterlocking/",
+    "facebook": "https://www.facebook.com/domenic9393/"
   },
-  "domain": "https://earthbenderslandscaping.ca"
+  "domain": "https://www.bnzinterlocking.ca/"
 }

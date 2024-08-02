@@ -9,246 +9,658 @@ eleventyNavigation:
 ---
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/local.css">
-{% endblock %}
+<link rel="stylesheet" href="/assets/css/local.css" />
+{% endblock %} {% extends 'layouts/base.html' %} {% block body %}
 
-{% extends 'layouts/base.html' %}
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
 
-{% block body %}
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
+<!-- Usage Notes:
+We made this stitch to overlap the section below it, so if there's a patterned texture or image background on the next section below, it will overlap on top of it. Other Stitches like this would have a white gap between the cards an the next section. In order to make Stitches like this work, we need to add a padding top on the section below it to counteract the overlap. 
 
-    <section id="hero-1621">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">For any small business need</span>
-                <h1 class="cs-title">
-                    The CodeStitch Advanced Starter Kit - Main Branch
-                </h1>
-                <a href="" class="cs-button-solid">Call to Action</a>
-                <!--Bottom Corners-->
-                <div class="cs-corners" aria-hidden="true"></div>
-            </div>
-            <ul class="cs-card-group">
-                <li class="cs-item">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-styles.svg" alt="icon" width="48" height="48">
-                    <h2 class="cs-h3">LESS/SASS</h2>
-                    <p class="cs-item-text">
-                        Both preprocessors, alongside vanilla CSS, all available under one kit
-                    </p>
-                </li>
-                <li class="cs-item">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-optimize.svg" alt="icon" width="48" height="48">
-                    <h2 class="cs-h3">Optimization</h2>
-                    <p class="cs-item-text">
-                        Get better Pagespeed scores, quicker, with automatic critical CSS inlining, minifiction and asset optimization
-                    </p>
-                </li>
-                <li class="cs-item">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-cart.svg" alt="icon" width="48" height="48">
-                    <h2 class="cs-h3">eCommerce</h2>
-                    <p class="cs-item-text">
-                        Create the fastest of eCommerce stores with a seamless Shopify integration
-                    </p>
-                </li>
-                <li class="cs-item">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-cms.svg" alt="icon" width="48" height="48">
-                    <h2 class="cs-h3">CMS</h2>
-                    <p class="cs-item-text">
-                        Free time and empower your clients with a Decap content management system
-                    </p>
-                </li>
-            </ul>
-        </div>
+ON MOBILE (360px): add padding-top: (654/16rem); using LESS, or padding-top: calc(654 / 16 * 1rem); if you're using SCSS, or padding-top: 40.875rem; if you're just using vanilla CSS.
 
-        <!-- Background Image -->
-        <picture class="cs-background">
-            <source media="(max-width: 600px)"
-            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2-m.jpeg">
-            <source media="(min-width: 601px)"
-            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2.jpeg">
-            <img loading="lazy" decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2.jpeg" alt="meeting" width="1920"
-            height="1200" aria-hidden="true">
+ON TABLET (768px): Reset to padding-top: (230/16rem); using LESS, padding-top: calc(230 / 16 * 1rem) for SCSS or padding-top: 15.625rem; for CSS
+
+Doing this will complete the overlapping "breaking the container" look.
+-->
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1249">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">BnZ Interlocking and Design</span>
+      <h1 class="cs-title">GTA's Best Interlocking and Landscape Services</h1>
+      <p class="cs-text">
+        At BnZ, we craft outdoor spaces where you can relax, entertain, and
+        create lasting memories. Let us enhance your home's beauty and make
+        every moment spent outside special.
+      </p>
+      <a href="/contact" class="cs-button-5">
+        <span class="cs-button-text">Get a Quote</span>
+      </a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <h3 class="cs-h3">Interlocking</h3>
+          <p class="cs-item-text">
+            We specialize in designing and installing stunning interlocking
+            solutions that enhance the beauty and functionality of your outdoor
+            spaces.
+          </p>
+        </a>
+        <img
+          src="/assets/images/interlocking-front.jpg"
+          alt="interlocked driveway, retaining walls, and steps"
+          class="cs-item-background"
+        />
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <h3 class="cs-h3">Patio Construction</h3>
+          <p class="cs-item-text">
+            Our patio construction services create beautiful, durable outdoor
+            living areas that are perfect for entertaining or relaxing. We use
+            high-quality materials to ensure longevity and appeal.
+          </p>
+        </a>
+        <img
+          src="/assets/images/pools-post.jpg"
+          alt="patio interlocking"
+          class="cs-item-background"
+        />
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <h3 class="cs-h3">Retaining Walls</h3>
+          <p class="cs-item-text">
+            Our expertly crafted retaining walls add both functionality and
+            beauty to your landscape, providing essential support while
+            enhancing your outdoor space’s visual appeal.
+          </p>
+        </a>
+        <img
+          src="/assets/images/retaining-wall.jpg"
+          alt="retaining wall"
+          class="cs-item-background"
+        />
+      </li>
+    </ul>
+  </div>
+
+  <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
+  <img
+    src="/assets/images/hero.jpg"
+    alt="driveway interlocking"
+    class="cs-background"
+  />
+</section>
+
+<!-- ============================================ -->
+<!--                    Stats                     -->
+<!-- ============================================ -->
+
+<section id="stats-1659">
+  <div class="cs-container">
+    <img
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      class="cs-picture"
+      src="/assets/images/why-us.jpg"
+      alt="pathway with steps and retaining walls"
+      width="630"
+      height="601"
+    />
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Committed to Excellence</span>
+        <h2 class="cs-title">Why Choose BnZ Interlocking and Design?</h2>
+        <p class="cs-text">
+          With over 20 years of experience, we have mastered the art of creating
+          stunning landscapes that enhance the beauty and functionality of any
+          property. Our team of experts is dedicated to providing top-notch
+          service, from the initial consultation to the final touches. We pride
+          ourselves on our meticulous attention to detail, ensuring that every
+          element of your project is executed to perfection. Our commitment to
+          using high-quality materials and innovative design techniques sets us
+          apart from the competition.
+        </p>
+        <p class="cs-text">
+          We understand that your outdoor space is an extension of your home, a
+          place where memories are made. That’s why we approach each project
+          with the same care and consideration we would our own. Whether it’s a
+          small garden or a large commercial property, we tailor our services to
+          meet your specific needs and vision. Our long list of satisfied
+          clients and glowing reviews are a testament to our dedication to
+          excellence and customer satisfaction
+        </p>
+      </div>
+      <ul class="cs-stat-group">
+        <li class="cs-stat">
+          <span class="cs-number">20+</span>
+          <span class="cs-desc">Years of Experience</span>
+        </li>
+        <li class="cs-stat">
+          <span class="cs-number">200+</span>
+          <span class="cs-desc">Jobs Completed</span>
+        </li>
+        <li class="cs-stat">
+          <span class="cs-number">130+</span>
+          <span class="cs-desc">Positive Reviews</span>
+        </li>
+        <li class="cs-stat">
+          <span class="cs-number">93%</span>
+          <span class="cs-desc">Rating on HomeStars</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-563">
+  <div class="cs-container">
+    <img
+      loading="lazy"
+      decoding="async"
+      src="/assets/images/whole-front.jpg"
+      alt="interlocking on driveway, stone steps and retaining walls"
+      width="630"
+      height="528"
+      aria-hidden="true"
+      class="cs-picture"
+    />
+    <div class="cs-content">
+      <span class="cs-topper">Our Specialty</span>
+      <h2 class="cs-title">
+        Interlocking <span class="cs-color">Driveways</span> and
+        <span class="cs-color">Walkways</span>
+      </h2>
+      <p class="cs-text">
+        Our interlocking driveways and walkways are not just functional
+        elements; they are an integral part of your property's aesthetic appeal.
+        We offer a wide range of design options, from classic patterns to modern
+        layouts, allowing you to customize the look to complement your home’s
+        architecture. Our skilled craftsmen meticulously install each paver,
+        ensuring durability and a flawless finish.
+      </p>
+      <p class="cs-text">
+        Beyond aesthetics, our interlocking solutions provide practical
+        benefits. They are easy to maintain, weather-resistant, and can
+        withstand heavy use, making them a long-lasting investment for your
+        property. We also offer environmentally friendly options that promote
+        better water drainage and reduce runoff.
+      </p>
+      <a href="/contact" class="cs-button-5">
+        <span class="cs-button-text">Call Now</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                     FAQ                      -->
+<!-- ============================================ -->
+
+<section id="faq-1261">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Frequently Asked Questions</span>
+      <h2 class="cs-title">Your Questions, Answered</h2>
+    </div>
+    <!--We made two lists so when you open an FAQ item, they behave properly and separate from each other, wrapped in a wrapper div for better flexboxxing -->
+    <div class="cs-wrapper">
+      <ul class="cs-faq-group">
+        <!-- Active class added as default -->
+        <li class="cs-faq-item active">
+          <button class="cs-button">
+            <span class="cs-button-text"> What services do you offer? </span>
+          </button>
+          <p class="cs-item-p">
+            We offer a range of landscaping services, including interlocking,
+            flagstone and brick pavers, retaining walls, outdoor kitchens, and
+            more. Our team is experienced in both design and installation.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              What is your process for getting a project started?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            We begin with a consultation to understand your needs and vision.
+            After providing a detailed estimate, we work closely with you to
+            finalize the design before starting the construction.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              How long does a typical project take?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            The duration of a project varies depending on its size and
+            complexity. Typically, projects can range from a few days to a few
+            weeks. We provide a detailed timeline during the consultation phase.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              Can you help with the design of my outdoor space?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Absolutely! Our team includes experienced designers who can help
+            create a layout that maximizes the beauty and functionality of your
+            space.
+          </p>
+        </li>
+      </ul>
+      <ul class="cs-faq-group">
+        <!-- Active class added as default -->
+        <li class="cs-faq-item active">
+          <button class="cs-button">
+            <span class="cs-button-text"> What services do you offer? </span>
+          </button>
+          <p class="cs-item-p">
+            We offer a range of landscaping services, including interlocking,
+            flagstone and brick pavers, retaining walls, outdoor kitchens, and
+            more. Our team is experienced in both design and installation.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              What is your process for getting a project started?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            We begin with a consultation to understand your needs and vision.
+            After providing a detailed estimate, we work closely with you to
+            finalize the design before starting the construction.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              How long does a typical project take?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            The duration of a project varies depending on its size and
+            complexity. Typically, projects can range from a few days to a few
+            weeks. We provide a detailed timeline during the consultation phase.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              Can you help with the design of my outdoor space?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Absolutely! Our team includes experienced designers who can help
+            create a layout that maximizes the beauty and functionality of your
+            space.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--SVG Waves-->
+</section>
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+<section id="services-1188">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Other services</span>
+      <h2 class="cs-title">We Provide Quality Landscaping Services</h2>
+      <p class="cs-text">
+        Our comprehensive landscaping services cater to all your outdoor needs.
+        Whether you're looking for elegant flagstone pavers, robust brick
+        installations, or custom firepits, we deliver exceptional results.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="/assets/svgs/flagstone.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+            data-img2picture-ignore
+          />
         </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="sbs-523">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">How it works</span>
-                <h2 class="cs-title">What makes this kit special</h2>
-                <p class="cs-text">
-                    Behind the kit is careful management of the file structure, such that all shared code lives in the "main" branch. Each feature then lives on a separate branch, allowing you to choose what capabilities the project requires.
-                </p>
-                <p class="cs-text">
-                    Some files, namely "package.json", "package-lock.json", ".eleventy.js", and "_includes/base.html", require additions to them when merging new branches. Cloning the repo from a template loses all commit history, so conflicts will arise in these files. These can be resolved by ensuring all unique code is merged into the project.
-                </p>
-                <p class="cs-text">
-                    As such, a basic knowledge of Git is required before using this kit, with a solid grasp of how to resolve merge conflicts strongly advisable. You are welcome to merge in feature branches at a later date, after building the project up, but this may result in more complicated merges.
-                </p>
-                <a href="" class="cs-button-solid">Read More</a>
-            </div>
-            <div class="cs-image-group">
-                <!--Large Image-->
-                <picture class="cs-picture cs-picture-large">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting.jpeg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting.jpeg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting.jpeg" alt="lab" width="334" height="380">
-                </picture>
-                <!--Small Image-->
-                <picture class="cs-picture cs-picture-small">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg" alt="lab" width="183" height="158">
-                </picture>
-            </div>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Flagstone Pavers</h3>
+          <p class="cs-item-text">
+            Crafted from natural stone, our flagstone pavers offer a timeless
+            and elegant look, ideal for patios and walkways.
+          </p>
         </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Steps                      -->
-    <!-- ============================================ -->
-
-    <section id="steps-1172">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Just a few steps before</span>
-                <h2 class="cs-title">How To Get Started</h2>
-                <p class="cs-text">
-                    As this kit relies on merging different branches to get started, we'll need to do a few things first to ensure this happens smoothly and nothing gets missed.
-                </p>
-            </div>
-            <ul class="cs-card-group">
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-git.svg" alt="icon" width="48" height="48">
-                    </picture>
-                    <h2 class="cs-h3">1. Merge Branches</h2>
-                    <p class="cs-item-text">
-                        Merge the branches you need for the project via the CLI, using "git merge [BRANCH] --allow-unrelated-histories". Resolve any conflicts.
-                    </p>
-                </li>
-
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-install.svg" alt="icon" width="48" height="48">
-                    </picture>
-                    <h2 class="cs-h3">2. Install Dependencies</h2>
-                    <p class="cs-item-text">
-                        Run "npm install" to install all the packages and plugins needed to make your super awesome website.
-                    </p>
-                </li>
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-todo.svg" alt="icon" width="48" height="48">
-                    </picture>
-                    <h2 class="cs-h3">3. Check Off Todos</h2>
-                    <p class="cs-item-text">
-                        Search the project for any instance of "CS-TODO". We've marked any actions that need to be taken to get your project up to speed ASAP.
-                    </p>
-                </li>
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-code.svg" alt="icon" width="48" height="48">
-                    </picture>
-                    <h2 class="cs-h3">4. Get Developing!</h2>
-                    <p class="cs-item-text">If using the sass/less branch, you can move over the starter styles to get a headstart. Otherwise, clear all page data and styles, and begin!</p>
-                </li>
-            </ul>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="/assets/svgs/brick.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+            data-img2picture-ignore
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Brick Pavers</h3>
+          <p class="cs-item-text">
+            Our brick pavers are perfect for creating classic, durable surfaces
+            that can withstand the test of time."
+          </p>
         </div>
-        <!--Tire Screech-->
-    </section>
-
-    <!-- ============================================ -->
-    <!--                Why Choose Us                 -->
-    <!-- ============================================ -->
-
-    <section id="why-choose-1657">
-        <div class="cs-container">
-            <div class="cs-content">
-                <div class="cs-flex">
-                    <span class="cs-topper">CSS, LESS and SASS</span>
-                    <h2 class="cs-title">Your favourite CSS syntaxes - all under one roof</h2>
-                </div>
-                <ul class="cs-ul">
-                    <li class="cs-li">
-                        <span class="cs-number">CSS</span>
-                        <p class="cs-li-text">
-                            If you prefer vanilla CSS, everything has already been set up for you. You shouldn't need to merge in the SASS and LESS branches, and the ./starter-styles folder can be deleted.
-                        </p>
-                    </li>
-                    <li class="cs-li">
-                        <span class="cs-number">LESS</span>
-                        <p class="cs-li-text">
-                            If you want to use the LESS preprocessor, make sure the "less" branch has been merged to include the LESS processor. When all branches have been merged, you can find the kit styles in ./starter-styles. Copy these over to /assets/less, or delete them to start from scratch.
-                        </p>
-                    </li>
-                    <li class="cs-li">
-                        <span class="cs-number">SASS</span>
-                        <p class="cs-li-text">
-                            Same as before - merge in the "sass" branch to include the SASS processor. Delete the ./starter-styles folder or copy over the SASS styles into /assets/sass to get a headstart on the project
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="cs-wrapper">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting12.jpg">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting12.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting12.jpg" alt="meeting" width="630" height="414">
-                </picture>
-
-                <p class="cs-review">
-                    <svg class="cs-quote" preserveAspectRatio="none" viewBox="0 0 100 93" fill="none" xmlns="http://www.w3.org/2000/svg" preser>
-                        <g opacity=".4" clip-path="url(#a)" fill="var(--quoteColor)"><path d="M22.94 84H0L18.305.854H55L22.94 84ZM67.94 84H45L63.305.854H100L67.94 84Z"/></g>
-                        <defs>
-                            <clipPath id="a-1657"><path fill="#fff" transform="translate(0 .854)" d="M0 0h100v83.146H0z"/></clipPath>
-                        </defs>
-                    </svg>
-                    To minimise the number of merge conflicts, vanilla CSS for these introductory pages are supplied in /assets. Should you wish to carry over the starting kit styles, LESS and SASS versions are supplied outside of ./src
-                </p>
-            </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="/assets/svgs/fire.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+            data-img2picture-ignore
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Firepits</h3>
+          <p class="cs-item-text">
+            Enhance your outdoor living space with a custom firepit, perfect for
+            cozy gatherings and outdoor entertainment.
+          </p>
         </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--             Side By Side Reverse             -->
-    <!-- ============================================ -->
-
-    <section id="sbsr-1309">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <!--Floating Box-->
-                <div class="cs-box">
-                    <span class="cs-desc">Building a better website, together</span>
-                </div>
-                <!--Image-->
-                <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg" alt="meeting" width="630" height="630" aria-hidden="true">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">Help & Support</span>
-                <h2 class="cs-title">Guidance every step of the way</h2>
-                <p class="cs-text">Outside of a cool new feature, each branch comes with an introductory landing page (just like this one) and a branch-specific README. The landing page gives you a quick overview of the branch, with the README providing more technical details should you wish to expand.</p>
-                <p class="cs-text">Additionally, all project-critical actions that need to be taken have a comment containing "CS-TODO". After merging in your branches, you can search the codebase for "CS-TODO", find the most important changes that need to be made, and action them effortlessly.</p>
-                <p class="cs-text">Finally, if you are still stuck or find a bug in the kit, you can use the CTAs in the header to get directly in touch with the kit creators, or reach out to a community of hundreds of other developers.</p>
-                <p class="cs-text">The kit continues to be supported going forward, with a complete set of tutorial videos and additional feature branches planned in the very near future. Follow our subreddit to stay up to date!</p>
-                <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
-            </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="/assets/svgs/stair.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+            data-img2picture-ignore
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Landscape Steps</h3>
+          <p class="cs-item-text">
+            Our landscape steps provide safe, stylish transitions between
+            different levels of your yard, blending seamlessly with the
+            surrounding environment.
+          </p>
         </div>
-    </section>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="/assets/svgs/chef-hat.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+            data-img2picture-ignore
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Outdoor Kitchens</h3>
+          <p class="cs-item-text">
+            We design and build outdoor kitchens that expand your living space
+            and make outdoor cooking and dining a pleasure.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="/assets/svgs/concrete.svg"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+            data-img2picture-ignore
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">All Concrete Work</h3>
+          <p class="cs-item-text">
+            From driveways to decorative elements, our concrete work is precise
+            and reliable, providing a strong foundation for any project.
+          </p>
+        </div>
+      </li>
+    </ul>
+    <a href="/contact" class="cs-button-5">
+      <span class="cs-button-text">Get a Free Estimate</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-45">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Work</span>
+      <h2 class="cs-title">Interlocking and Stonework in the GTA</h2>
+      <p class="cs-text">
+        Our portfolio showcases the diverse projects we've completed across the
+        GTA. Each piece reflects our dedication to quality and craftsmanship,
+        from intricate stonework to expansive interlocking installations.
+      </p>
+    </div>
+    <ul class="cs-image-group">
+      <!-- Image 1 -->
+      <li class="cs-item">
+        <img
+          loading="lazy"
+          decoding="async"
+          class="cs-picture"
+          src="/assets/images/walkway-post.jpg"
+          alt=""
+          width="346"
+          height="346"
+        />
+      </li>
+      <!-- Image 2 -->
+      <li class="cs-item">
+        <img
+          loading="lazy"
+          decoding="async"
+          class="cs-picture"
+          src="/assets/images/driveway-post.jpg"
+          alt=""
+          width="346"
+          height="346"
+        />
+      </li>
+      <!-- Image 3 -->
+      <li class="cs-item">
+        <img
+          loading="lazy"
+          decoding="async"
+          class="cs-picture"
+          src="/assets/images/pool.jpg"
+          alt=""
+          width="346"
+          height="346"
+        />
+      </li>
+      <!-- Image 4 -->
+      <li class="cs-item">
+        <img
+          loading="lazy"
+          decoding="async"
+          class="cs-picture"
+          src="/assets/images/firepit.jpg"
+          alt=""
+          width="346"
+          height="346"
+        />
+      </li>
+      <!-- Image 5 -->
+      <li class="cs-item">
+        <img
+          loading="lazy"
+          decoding="async"
+          class="cs-picture"
+          src="/assets/images/stairs-post.jpg"
+          alt=""
+          width="346"
+          height="346"
+        />
+      </li>
+      <!-- Image 6 -->
+      <li class="cs-item">
+        <img
+          loading="lazy"
+          decoding="async"
+          class="cs-picture"
+          src="/assets/images/steps-gallery.jpg"
+          alt=""
+          width="346"
+          height="346"
+        />
+      </li>
+      <!-- Image 7 -->
+      <li class="cs-item">
+        <img
+          loading="lazy"
+          decoding="async"
+          class="cs-picture"
+          src="/assets/images/cobblestone.jpg"
+          alt=""
+          width="346"
+          height="346"
+        />
+      </li>
+      <!-- Image 8 -->
+      <li class="cs-item">
+        <img
+          loading="lazy"
+          decoding="async"
+          class="cs-picture"
+          src="/assets/images/back-patio.jpg"
+          alt=""
+          width="346"
+          height="346"
+        />
+      </li>
+    </ul>
+    <a href="/contact" class="cs-button-5">
+      <span class="cs-button-text">View our Work</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<div id="reviews-1714">
+  <div class="cs-container">
+    <div class="cs-content">
+      <img
+        class="cs-icon"
+        src="/assets/svgs/quote.svg"
+        alt="quote"
+        width="120"
+        height="99"
+        loading="lazy"
+        decoding="async"
+        data-img2picture-ignore
+      />
+      <p class="cs-quote">
+        <span class="cs-color">I highly recommend BnZ for any job.</span> They
+        recently added a beautiful patio to our backyard and
+        <span class="cs-color">we couldn't be happier with the result.</span>
+        Dominic came out to give us an estimate for our job and spent a
+        considerable amount of time with us, going over all our options. His
+        team even dropped off some samples when we couldn't decide what stone to
+        go with so we could see it in-place.
+        <span class="cs-color">No detail was too small</span> for them to take
+        the time to do it right and make sure it looked good. They left the job
+        site clean at the end of every day and were very professional.
+      </p>
+    </div>
+  </div>
+  <!--Background Image-->
+  <img
+    aria-hidden="true"
+    loading="lazy"
+    decoding="async"
+    class="cs-background"
+    src="/assets/images/review-patio.jpg"
+    alt="interlock patio and walkway"
+    width="1350"
+    height="1012"
+  />
+</div>
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="cta-697">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">
+        Ready to transform your property? Request a free quote today!
+      </h2>
+      <a href="/contact" class="cs-button-5">
+        <span class="cs-button-text">Get a Free Estimate</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 {% endblock %}

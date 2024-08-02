@@ -56,28 +56,28 @@
 const path = require("path");
 
 module.exports = {
-    eleventyInputDir: "./src",
-    imagesOutputDir: "public/assets/images",
-    urlPath: "/assets/images/",
-    fetchRemote: true,
-    minWidth: 150,
-    maxWidth: 1500,
-    hoistImgClass: true,
-    widthStep: 100,
-    sizes: "100vw",
-    sharpAvifOptions: {
-        quality: 80,
-    },
-    sharpWebpOptions: {
-        quality: 80,
-    },
-    sharpJpegOptions: {
-        quality: 80,
-    },
-    filenameFormat: function (id, src, width, format) {
-        const extension = path.extname(src);
-        const name = path.basename(src, extension);
+  eleventyInputDir: "./src",
+  imagesOutputDir: "public/assets/images",
+  urlPath: "/assets/images/",
+  fetchRemote: true,
+  minWidth: 150,
+  maxWidth: 1500,
+  hoistImgClass: true,
+  widthStep: 200,
+  sizes: "100vw",
+  sharpAvifOptions: {
+    quality: 80,
+  },
+  sharpWebpOptions: {
+    quality: 80,
+  },
+  sharpJpegOptions: {
+    quality: 80,
+  },
+  filenameFormat: function (id, src, width, format) {
+    const extension = path.extname(src);
+    const name = path.basename(src, extension);
 
-        return `${name}-${width}w.${format}`;
-    },
+    return `${name}-${width}w.${format}`;
+  },
 };
