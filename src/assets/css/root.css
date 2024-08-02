@@ -187,9 +187,6 @@ html {
   body.cs-open {
     overflow: hidden;
   }
-  .cs-button-5 {
-    display: none;
-  }
   #cs-navigation {
     width: 100%;
     /* prevents padding and border from affecting height and width */
@@ -198,6 +195,9 @@ html {
     position: fixed;
     z-index: 10000;
     transition: background-color 0.3s;
+  }
+  #cs-navigation .cs-button-5 {
+    display: none;
   }
   #cs-navigation:before {
     /* black blurred overlay */

@@ -9,13 +9,12 @@
         <a href="tel:{{ client.phoneForTel }}" class="cs-top-link">
           <img
             class="cs-link-icon"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-stroke-white.svg"
+            src="/assets/svgs/phone-stroke-white.svg"
             alt="logo"
             width="16"
             height="16"
             aria-hidden="true"
             decoding="async"
-            data-img2picture-ignore
           />
           Call us {{ client.phoneFormatted }}
         </a>
@@ -71,17 +70,10 @@
           <span class="cs-line cs-line3" aria-hidden="true"></span>
         </div>
       </button>
-      <!-- All CodeStitch navigations use the same HTML within the cs-ul-wrapper.
-       This one has been built with eleventyNavigation in mind, so you don't need to manually set active link styles or adjust HTML whenever a new page is added.
-       Should you wish to use this way of working, just replace the .cs-ul-wrapper in the new navigation with the one below-->
       <div class="cs-ul-wrapper">
         <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-          {% set navPages = collections.all | eleventyNavigation %} {# Loop
-          through all pages with a eleventyNavigation in the frontmatter #} {%
-          for entry in navPages %} {# Define a hasChild variable to make it
-          easier to test what links are dropdowns#} {% set hasChild =
-          entry.children.length %} {# If this page is a dropdown, give it the
-          appropriate classes, icons and accessibility attributes#}
+          {% set navPages = collections.all | eleventyNavigation %} {% for entry
+          in navPages %} {% set hasChild = entry.children.length %}
           <li
             class="cs-li {% if hasChild %} cs-dropdown {% endif %}"
             {%
@@ -93,26 +85,22 @@
             endif
             %}
           >
-            {# Similarly, if the link is active, apply the necessary classes #}
-            <a
-              href="{{ entry.url }}"
+            {% if hasChild %}
+            <span
               class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}"
             >
-              {{ entry.key }} {% if hasChild %}
+              {{ entry.key }}
               <img
                 class="cs-drop-icon"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+                src="/assets/svgs/down.svg"
                 alt="dropdown icon"
                 width="15"
                 height="15"
                 decoding="async"
                 aria-hidden="true"
+                data-img2picture-ignore
               />
-              {% endif %}
-            </a>
-
-            {# Dropdowns have another ul/li set up within the parent li. Render
-            in the same way as a normal link #} {% if hasChild %}
+            </span>
             <ul class="cs-drop-ul">
               {% for child in entry.children %}
               <li class="cs-drop-li">
@@ -122,12 +110,20 @@
               </li>
               {% endfor %}
             </ul>
+            {% else %}
+            <a
+              href="{{ entry.url }}"
+              class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}"
+            >
+              {{ entry.key }}
+            </a>
             {% endif %}
           </li>
           {% endfor %}
         </ul>
       </div>
     </nav>
+
     <a href="/contact" class="cs-button-5">
       <span class="cs-button-text">Get a Free Estimate</span>
     </a>

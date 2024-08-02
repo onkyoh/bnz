@@ -214,11 +214,11 @@ html {
     }
   }
 
-  .cs-button-5 {
-    display: none;
-  }
-
   #cs-navigation {
+    .cs-button-5 {
+      display: none;
+    }
+
     width: 100%;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
