@@ -1,19 +1,18 @@
 {
-  "name": "BnZ Interlocking and Design",
-  "email": "domenicg@hotmail.com",
-  "phoneForTel": "416-881-0102",
-  "phoneFormatted": "(416) 881-0102",
+  "name": "GroundScape Solutions",
+  "email": "",
+  "phoneForTel": "416-668-2969",
+  "phoneFormatted": "(416) 668-2969",
   "address": {
-    "lineOne": "349 Gladstone Ave",
+    "lineOne": "2181 Yonge St",
     "lineTwo": "",
     "city": "Toronto",
     "state": "ON",
-    "zip": "M6H 3H5",
-    "mapLink": "https://maps.app.goo.gl/zwoTzH8LVM3QBtnn9"
+    "zip": "M4S 3H7",
+    "mapLink": "https://maps.app.goo.gl/NDtcTjfVcuwASAUM9"
   },
   "social": {
-    "instagram": "https://www.instagram.com/bnzinterlocking/",
-    "facebook": "https://www.facebook.com/domenic9393/"
+    "instagram": "https://www.instagram.com/p/BhXPE0wnSNq/"
   },
-  "domain": "https://www.bnzinterlocking.ca/"
+  "domain": "https://groundscapesolutions.ca/"
 }

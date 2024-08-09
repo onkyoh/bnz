@@ -6,8 +6,8 @@
   // This kit has also removed all instances of .cs-button outside of the root sheet, meaning you can change for any of the content flair buttons in one place.
   :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --primary: #95af15;
-    --primaryLight: #bfd456;
+    --primary: #73b21a;
+    --primaryLight: #b4d685;
     --secondary: #232323;
     --secondaryLight: #424242;
     --headerColor: #1a1a1a;
@@ -198,6 +198,10 @@ html {
 /* Mobile - 767px */
 @media only screen and (max-width: 47.9375rem) {
   #cs-navigation {
+    .cs-button-5 {
+      display: none;
+    }
+
     .cs-top-link {
       &:nth-of-type(2) {
         display: none;
@@ -215,10 +219,6 @@ html {
   }
 
   #cs-navigation {
-    .cs-button-5 {
-      display: none;
-    }
-
     width: 100%;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
